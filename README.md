@@ -13,7 +13,7 @@ npm install
 3. Crear un archivo `.env` basado en el archivo `.env.example`
 4. Ejecutar migracion de prisma
 ```bash
-npx prisma migrate dev
+npx prisma migrate dev --name
 ```
 5. Ejecutar el microservicio
 ```bash
