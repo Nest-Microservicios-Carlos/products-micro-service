@@ -1,4 +1,4 @@
-import { Controller, Param, ParseIntPipe } from '@nestjs/common';
+import { Controller, ParseIntPipe } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -16,7 +16,7 @@ export class ProductsController {
   }
 
   // @Get()
-  @MessagePattern({ cmd: 'find_all' })
+  @MessagePattern('find_all')
   findAll(@Payload() paginationDto: PaginationDto) {
     return this.productsService.findAll(paginationDto);
   }
